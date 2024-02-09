@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SppController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::view('/template', 'template.master ' ) ;
+Route::view('/template', 'template.master ' ) ;
 
 route::view('/projek','template.projek') ;
+
+route::controller(SppController::class)->group(function () {
+    Route::get('/spp','index')->name('spp.index');
+    Route::get('/spp/create','create')->name('spp.create');
+    Route::post('/spp','store')->name('spp.store');
+    // Route::get('/spp/{id}','show')->name('spp.show');
+    Route::get('/spp/{id}/edit','edit')->name('spp.edit');
+    Route::put('/spp/{id}','update')->name('spp.update');
+    Route::delete('/spp/{id}','destroy')->name('spp.destroy');
+ });
