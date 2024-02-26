@@ -25,7 +25,7 @@
             </tr>
           </thead>
           <tbody>
-            @forelse ($kelases as $key => $value)
+            @forelse ($kelass as $key => $value)
               <tr>                
                 <td>
                   {{ $value->id_kelas }}
@@ -36,7 +36,7 @@
                 <td>
                   {{ $value->kompetensi_keahlian }}
                 </td>
-              </tr>  
+              </tr>   
                   
 <td>
   <form action="{{route('kelas.destroy', $value->id_kelas)}}" method="POST">

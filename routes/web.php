@@ -3,6 +3,7 @@
 use App\Http\Controllers\SppController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KelasController;
+use App\Http\Controllers\PetugasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,4 @@ route::controller(SppController::class)->group(function () {
  });
 
  Route::resource('/kelas', KelasController::class);
+ 
