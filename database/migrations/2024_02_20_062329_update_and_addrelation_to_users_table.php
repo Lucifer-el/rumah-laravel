@@ -15,7 +15,7 @@ return new class extends Migration
             //
             $table->dropColumn('email_verified_at');
             $table->dropColumn('remember_token');
-            $table->foreignId('id_petugas')->references('id')->on('petugas')->onDelete('cascade');
+            $table->foreignId('id_petugas')->references('id_petugas')->on('petugases')->onDelete('cascade');
         });
     }
 
